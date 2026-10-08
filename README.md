@@ -1,8 +1,7 @@
 # Orthometric Height Calculator for GCP Feature Services
 
 A small Jupyter notebook that fills in missing orthometric heights on a
-Ground Control Point (GCP) feature service hosted on ArcGIS Online or
-ArcGIS Enterprise, using NOAA's public geoid height API.
+Ground Control Point (GCP) feature service hosted on ArcGIS Online using NOAA's public geoid height API.
 
 For each GCP missing an orthometric height, the notebook:
 
@@ -12,6 +11,8 @@ For each GCP missing an orthometric height, the notebook:
 3. Writes the geoid separation and orthometric height back to the feature
    service.
 4. Saves a dated CSV snapshot of the results locally.
+
+<img width="3840" height="1980" alt="orthometric-architecture" src="https://github.com/user-attachments/assets/945ae666-344e-4035-aab3-b050aae81189" />
 
 ## Requirements
 
@@ -28,7 +29,7 @@ pip install arcgis pandas requests
 
 1. Open `orthometric_height_gcp.ipynb`.
 2. In the **Configuration** cell, set `GCP_ITEM_ID` to your feature layer's
-   ArcGIS Online/Enterprise item ID, and adjust the field names if your
+   ArcGIS Online item ID, and adjust the field names if your
    schema differs from the defaults.
 3. In the **Connect to ArcGIS Online** cell, authenticate. `GIS("home")`
    works automatically inside ArcGIS Online Notebooks or ArcGIS Pro's
@@ -54,3 +55,5 @@ pip install arcgis pandas requests
 ## License
 
 Released under the [MIT License](LICENSE).
+
+
